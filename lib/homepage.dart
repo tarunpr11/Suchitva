@@ -200,6 +200,9 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
+              SizedBox(
+                height: 10.0,
+              ),
               Flexible(
                 child: Card(
                   color: Color(0xFF66CA98),
@@ -215,7 +218,7 @@ class HomePage extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(
-                            vertical: 15.0, horizontal: 40.0),
+                            vertical: 15.0, horizontal: 30.0),
                         child: Text(
                           'Now you can Buy,Sell and Rent \nused products from your Locality',
                           textAlign: TextAlign.center,
@@ -225,7 +228,7 @@ class HomePage extends StatelessWidget {
                       IconButton(
                         onPressed: () {},
                         icon: Image.asset('images/next.png'),
-                        iconSize: 40.0,
+                        iconSize: 55.0,
                       )
                     ],
                   ),
@@ -235,6 +238,113 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0)),
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 10.0,
+              color: Color(0xFF66CA98),
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0)),
+          child: BottomBar(),
+        ),
+      ),
+    );
+  }
+}
+
+class BottomBar extends StatefulWidget {
+  const BottomBar({super.key});
+
+  @override
+  State<BottomBar> createState() => _BottomBarState();
+}
+
+class _BottomBarState extends State<BottomBar> {
+  int tapIndex = 0;
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      currentIndex: tapIndex,
+      onTap: (int index) {
+        setState(() {
+          tapIndex = index;
+          print(index);
+        });
+      },
+      items: [
+        BottomNavigationBarItem(
+          icon: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.home_outlined,
+            ),
+            iconSize: 38.0,
+            color: Colors.grey[350],
+          ),
+          label: '',
+          activeIcon: IconButton(
+            onPressed: () {},
+            icon: Image.asset('images/ActiveHome.png'),
+            iconSize: 20.0,
+          ),
+        ),
+        BottomNavigationBarItem(
+          icon: IconButton(
+            onPressed: () {},
+            icon: Image.asset('images/newsIcon.png'),
+            iconSize: 20.0,
+          ),
+          label: '',
+          activeIcon: IconButton(
+            onPressed: () {},
+            icon: Image.asset('images/ActivenewsIcon.png'),
+            iconSize: 20.0,
+          ),
+        ),
+        BottomNavigationBarItem(
+          icon: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.add_circle,
+              color: Color(0xFF66CA98),
+            ),
+            iconSize: 40.0,
+          ),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: IconButton(
+            onPressed: () {},
+            icon: Image.asset('images/ChatIcon.png'),
+            iconSize: 20.0,
+          ),
+          label: '',
+          activeIcon: IconButton(
+            onPressed: () {},
+            icon: Image.asset('images/ActiveChat.png'),
+            iconSize: 20.0,
+          ),
+        ),
+        BottomNavigationBarItem(
+          icon: IconButton(
+            onPressed: () {},
+            icon: Image.asset('images/profileIcon.png'),
+            iconSize: 20.0,
+          ),
+          label: '',
+          activeIcon: IconButton(
+            onPressed: () {},
+            icon: Image.asset('images/ActiveProfile.png'),
+            iconSize: 20.0,
+          ),
+        ),
+      ],
     );
   }
 }
