@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:nirmal/screens/community.dart';
+import 'package:nirmal/screens/chat.dart';
 import 'package:nirmal/screens/homepage.dart';
 import 'package:nirmal/screens/news.dart';
 import 'package:nirmal/screens/profile.dart';
@@ -16,8 +16,8 @@ class _UserPageState extends State<UserPage> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    CommunityPage(),
     NewsPage(),
+    ChatPage(),
     ProfilePage()
   ];
   @override
