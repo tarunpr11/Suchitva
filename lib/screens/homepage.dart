@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage('images/HomePage.jpg'),
               fit: BoxFit.fill,
@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
               Row(
                 children: [
                   //Welcome message
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(top: 20.0, left: 10.0),
                     child: Text(
                       'Welcome back, Vivek!',
@@ -29,12 +29,12 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 30.0,
                   ),
                   // Notification icon
                   Padding(
-                    padding: EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.only(top: 20.0),
                     child: IconButton(
                       onPressed: () {},
                       icon: Image.asset('images/notif.png'),
@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.only(top: 20.0),
                     child: IconButton(
                       onPressed: () {},
                       icon: Image.asset('images/qrscan.png'),
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 20.0),
+                    padding: const EdgeInsets.only(top: 20.0),
                     child: IconButton(
                       onPressed: () {},
                       icon: Image.asset('images/fpicon.png'),
@@ -61,17 +61,17 @@ class HomePage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 10.0,
                   ),
                   Image.asset(
                     'images/location.png',
-                    color: Color(0xFFA9A9A7),
+                    color: const Color(0xFFA9A9A7),
                     scale: 1.4,
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       'Chennai, Tamil Nadu',
                       style: TextStyle(color: Color(0xFFA9A9A7)),
                     ),
@@ -86,7 +86,7 @@ class HomePage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
                       ),
-                      child: ListTile(
+                      child: const ListTile(
                         leading: Icon(
                           Icons.search,
                         ),
@@ -108,13 +108,13 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.centerLeft,
-                padding: EdgeInsets.only(left: 10.0, top: 10.0),
+                padding: const EdgeInsets.only(left: 10.0, top: 10.0),
                 child: Card(
                   color: Colors.green,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
-                  child: Padding(
+                  child: const Padding(
                     padding: EdgeInsets.all(10.0),
                     child: Text(
                       'Explore',
@@ -142,7 +142,7 @@ class HomePage extends StatelessWidget {
                               icon: Image.asset('images/smartbin.png'),
                               iconSize: 40.0,
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(bottom: 4.0),
                               child: Text(
                                 'Smart-Bin Locator',
@@ -165,7 +165,7 @@ class HomePage extends StatelessWidget {
                               icon: Image.asset('images/truck.png'),
                               iconSize: 40.0,
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(bottom: 4.0),
                               child: Text(
                                 'Smart-Bin Locator',
@@ -188,7 +188,7 @@ class HomePage extends StatelessWidget {
                               icon: Image.asset('images/complaint.png'),
                               iconSize: 40.0,
                             ),
-                            Padding(
+                            const Padding(
                               padding: EdgeInsets.only(bottom: 4.0),
                               child: Text(
                                 'Smart-Bin Locator',
@@ -202,7 +202,7 @@ class HomePage extends StatelessWidget {
               ),
               Flexible(
                 child: Card(
-                  color: Color(0xFF66CA98),
+                  color: const Color(0xFF66CA98),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ),
@@ -213,7 +213,7 @@ class HomePage extends StatelessWidget {
                         width: 60.0,
                         height: 60.0,
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(
                             vertical: 15.0, horizontal: 40.0),
                         child: Text(

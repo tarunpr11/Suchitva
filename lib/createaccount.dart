@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+import 'package:nirmal/userPage.dart';
 
-class createAccount extends StatelessWidget {
-  createAccount({super.key});
+class CreateAccount extends StatefulWidget {
+  const CreateAccount({super.key});
 
+  @override
+  State<CreateAccount> createState() => _CreateAccountState();
+}
+
+class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('images/Signup.jpg'),
             fit: BoxFit.fill,
@@ -16,11 +21,11 @@ class createAccount extends StatelessWidget {
         ),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 100.0,
             ),
             // Create account text
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(25.0),
               child: Text(
                 'Create account',
@@ -29,14 +34,14 @@ class createAccount extends StatelessWidget {
             ),
             // Card 1
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   top: 5.0, left: 40.0, right: 40.0, bottom: 5.0),
               child: Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
-                child: ListTile(
+                child: const ListTile(
                   leading: Icon(
                     Icons.person,
                   ),
@@ -51,14 +56,14 @@ class createAccount extends StatelessWidget {
             ),
             // Card 2
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   top: 5.0, left: 40.0, right: 40.0, bottom: 5.0),
               child: Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
-                child: ListTile(
+                child: const ListTile(
                   leading: Icon(
                     Icons.person,
                   ),
@@ -73,14 +78,14 @@ class createAccount extends StatelessWidget {
             ),
             // Card 3
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   top: 5.0, left: 40.0, right: 40.0, bottom: 5.0),
               child: Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
-                child: ListTile(
+                child: const ListTile(
                   leading: Icon(
                     Icons.person,
                   ),
@@ -95,13 +100,13 @@ class createAccount extends StatelessWidget {
             ),
             // Card 4
             Padding(
-              padding: EdgeInsets.only(top: 5.0, left: 40.0, right: 40.0),
+              padding: const EdgeInsets.only(top: 5.0, left: 40.0, right: 40.0),
               child: Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
-                child: ListTile(
+                child: const ListTile(
                   leading: Icon(
                     Icons.person,
                   ),
@@ -116,36 +121,38 @@ class createAccount extends StatelessWidget {
             ),
             // Create button
             Padding(
-              padding: EdgeInsets.only(top: 25.0),
+              padding: const EdgeInsets.only(top: 25.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
+                  const Text(
                     'Create',
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 23.0),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10.0,
                   ),
                   IconButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const UserPage()));
                     },
                     icon: Image.asset(
                       'images/next.png',
                     ),
                     iconSize: 65.0,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 50.0,
                   ),
                 ],
               ),
             ),
             // Bottom line
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(5.0),
               child: Text(
                 'Or create account using social media',
@@ -157,7 +164,7 @@ class createAccount extends StatelessWidget {
             ),
             // Social media icons
             Padding(
-              padding: EdgeInsets.only(top: 10.0),
+              padding: const EdgeInsets.only(top: 10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

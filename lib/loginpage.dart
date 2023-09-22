@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
-import 'createaccount.dart';
+import 'package:nirmal/createaccount.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('images/loginback.jpg'),
             fit: BoxFit.fill,
@@ -18,11 +24,11 @@ class LoginPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
-              padding: EdgeInsets.only(top: 30.0),
-              child: Image.asset('images/loginbacklogo.png'),
+              padding: const EdgeInsets.only(top: 30.0),
               height: 260.0,
+              child: Image.asset('images/loginbacklogo.png'),
             ),
-            Center(
+            const Center(
               child: Text(
                 'Sign in to your account',
                 style: TextStyle(
@@ -31,16 +37,16 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            DropButton(),
+            const DropButton(),
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   top: 5.0, left: 40.0, right: 40.0, bottom: 5.0),
               child: Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
-                child: ListTile(
+                child: const ListTile(
                   leading: Icon(
                     Icons.person,
                   ),
@@ -54,13 +60,13 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40.0),
+              padding: const EdgeInsets.symmetric(horizontal: 40.0),
               child: Card(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
-                child: ListTile(
+                child: const ListTile(
                   leading: Icon(
                     Icons.lock,
                   ),
@@ -73,7 +79,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(
+            const Expanded(
               child: Padding(
                 padding: EdgeInsets.only(right: 40.0, top: 8.0),
                 child: Text(
@@ -86,12 +92,12 @@ class LoginPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
+                  const Text(
                     'Sign Up',
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 23.0),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10.0,
                   ),
                   IconButton(
@@ -99,20 +105,20 @@ class LoginPage extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => createAccount()));
+                              builder: (context) => const CreateAccount()));
                     },
                     icon: Image.asset(
                       'images/next.png',
                     ),
                     iconSize: 65.0,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 25.0,
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 100.0,
             ),
           ],
@@ -134,14 +140,14 @@ class _DropButtonState extends State<DropButton> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 9.0, left: 40.0, right: 40.0),
+      padding: const EdgeInsets.only(top: 9.0, left: 40.0, right: 40.0),
       child: Card(
         color: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25.0),
         ),
         child: ListTile(
-          leading: Icon(
+          leading: const Icon(
             Icons.person,
           ),
           title: DropdownButton<String>(
