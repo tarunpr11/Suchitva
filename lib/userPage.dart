@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:nirmal/screens/chat.dart';
-import 'package:nirmal/screens/homepage.dart';
+import 'package:nirmal/homepage.dart';
 import 'package:nirmal/screens/news.dart';
 import 'package:nirmal/screens/profile.dart';
 
@@ -14,7 +14,7 @@ class UserPage extends StatefulWidget {
 
 class _UserPageState extends State<UserPage> {
   int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
+  static List<Widget> _widgetOptions = <Widget>[
     HomePage(),
     NewsPage(),
     ChatPage(),

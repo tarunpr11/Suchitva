@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:nirmal/biodata.dart';
 
-class ProfilePage extends StatefulWidget {
+class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   @override
-  State<ProfilePage> createState() => _ProfilePageState();
-}
-
-class _ProfilePageState extends State<ProfilePage> {
-  @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: TextButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => BioData()));
+        },
+        child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('images/Profile.png'),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

@@ -12,6 +12,7 @@ class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -36,19 +37,26 @@ class _CreateAccountState extends State<CreateAccount> {
             Padding(
               padding: const EdgeInsets.only(
                   top: 5.0, left: 40.0, right: 40.0, bottom: 5.0),
-              child: Card(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
+              child: Container(
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
+                  color: Colors.white,
                 ),
-                child: const ListTile(
-                  leading: Icon(
-                    Icons.person,
-                  ),
-                  title: Text(
-                    'Phone Number',
-                    style: TextStyle(
-                      color: Colors.grey,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Aadhar Number',
+                    hintStyle: TextStyle(
+                      fontSize: 15.0,
+                    ),
+                    border: InputBorder.none,
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                      ),
+                    ),
+                    prefixIcon: Icon(
+                      Icons.person,
                     ),
                   ),
                 ),
@@ -58,19 +66,26 @@ class _CreateAccountState extends State<CreateAccount> {
             Padding(
               padding: const EdgeInsets.only(
                   top: 5.0, left: 40.0, right: 40.0, bottom: 5.0),
-              child: Card(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
+              child: Container(
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
+                  color: Colors.white,
                 ),
-                child: const ListTile(
-                  leading: Icon(
-                    Icons.person,
-                  ),
-                  title: Text(
-                    'Phone Number',
-                    style: TextStyle(
-                      color: Colors.grey,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Password',
+                    hintStyle: TextStyle(
+                      fontSize: 15.0,
+                    ),
+                    border: InputBorder.none,
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                      ),
+                    ),
+                    prefixIcon: Icon(
+                      Icons.lock,
                     ),
                   ),
                 ),
@@ -80,19 +95,26 @@ class _CreateAccountState extends State<CreateAccount> {
             Padding(
               padding: const EdgeInsets.only(
                   top: 5.0, left: 40.0, right: 40.0, bottom: 5.0),
-              child: Card(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
+              child: Container(
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
+                  color: Colors.white,
                 ),
-                child: const ListTile(
-                  leading: Icon(
-                    Icons.person,
-                  ),
-                  title: Text(
-                    'Phone Number',
-                    style: TextStyle(
-                      color: Colors.grey,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'E-mail',
+                    hintStyle: TextStyle(
+                      fontSize: 15.0,
+                    ),
+                    border: InputBorder.none,
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                      ),
+                    ),
+                    prefixIcon: Icon(
+                      Icons.mail_sharp,
                     ),
                   ),
                 ),
@@ -100,20 +122,28 @@ class _CreateAccountState extends State<CreateAccount> {
             ),
             // Card 4
             Padding(
-              padding: const EdgeInsets.only(top: 5.0, left: 40.0, right: 40.0),
-              child: Card(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
+              padding: const EdgeInsets.only(
+                  top: 5.0, left: 40.0, right: 40.0, bottom: 5.0),
+              child: Container(
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
+                  color: Colors.white,
                 ),
-                child: const ListTile(
-                  leading: Icon(
-                    Icons.person,
-                  ),
-                  title: Text(
-                    'Phone Number',
-                    style: TextStyle(
-                      color: Colors.grey,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Mobile Number',
+                    hintStyle: TextStyle(
+                      fontSize: 15.0,
+                    ),
+                    border: InputBorder.none,
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(25.0),
+                      borderSide: BorderSide(
+                        color: Colors.black,
+                      ),
+                    ),
+                    prefixIcon: Icon(
+                      Icons.phone_android,
                     ),
                   ),
                 ),

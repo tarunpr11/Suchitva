@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nirmal/map_page.dart';
+import 'package:nirmal/complaintBox.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -25,12 +27,12 @@ class HomePage extends StatelessWidget {
                       'Welcome back, Vivek!',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 23.0,
+                        fontSize: 15,
                       ),
                     ),
                   ),
                   const SizedBox(
-                    width: 30.0,
+                    width: 5.0,
                   ),
                   // Notification icon
                   Padding(
@@ -38,7 +40,7 @@ class HomePage extends StatelessWidget {
                     child: IconButton(
                       onPressed: () {},
                       icon: Image.asset('images/notif.png'),
-                      iconSize: 20.0,
+                      iconSize: 11.0,
                     ),
                   ),
                   Padding(
@@ -46,7 +48,7 @@ class HomePage extends StatelessWidget {
                     child: IconButton(
                       onPressed: () {},
                       icon: Image.asset('images/qrscan.png'),
-                      iconSize: 20.0,
+                      iconSize: 11.0,
                     ),
                   ),
                   Padding(
@@ -54,9 +56,20 @@ class HomePage extends StatelessWidget {
                     child: IconButton(
                       onPressed: () {},
                       icon: Image.asset('images/fpicon.png'),
-                      iconSize: 20.0,
+                      iconSize: 11.0,
                     ),
                   ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 20.0),
+                    child: Text(
+                      '50',
+                      style: TextStyle(
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                      ),
+                    ),
+                  )
                 ],
               ),
               Row(
@@ -78,33 +91,33 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Card(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
+              Padding(
+                padding: EdgeInsets.only(
+                    top: 5.0, left: 15.0, right: 15.0, bottom: 5.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25.0),
+                    color: Colors.white,
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Search",
+                      hintStyle: TextStyle(
+                        fontSize: 15.0,
+                        color: Colors.black,
                       ),
-                      child: const ListTile(
-                        leading: Icon(
-                          Icons.search,
-                        ),
-                        title: Text(
-                          'Phone Number',
-                          style: TextStyle(
-                            color: Colors.grey,
-                          ),
-                        ),
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Colors.grey,
+                      ),
+                      suffixIcon: Icon(
+                        Icons.tune,
+                        color: Colors.grey,
                       ),
                     ),
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Image.asset('images/filter.png'),
-                    iconSize: 40.0,
-                  )
-                ],
+                ),
               ),
               Container(
                 alignment: Alignment.centerLeft,
@@ -138,7 +151,12 @@ class HomePage extends StatelessWidget {
                         child: Column(
                           children: [
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => MapPage()));
+                              },
                               icon: Image.asset('images/smartbin.png'),
                               iconSize: 40.0,
                             ),
@@ -146,7 +164,7 @@ class HomePage extends StatelessWidget {
                               padding: EdgeInsets.only(bottom: 4.0),
                               child: Text(
                                 'Smart-Bin Locator',
-                                style: TextStyle(fontSize: 12),
+                                style: TextStyle(fontSize: 9.0),
                               ),
                             ),
                           ],
@@ -168,8 +186,8 @@ class HomePage extends StatelessWidget {
                             const Padding(
                               padding: EdgeInsets.only(bottom: 4.0),
                               child: Text(
-                                'Smart-Bin Locator',
-                                style: TextStyle(fontSize: 12),
+                                'Garbage Truck Locator',
+                                style: TextStyle(fontSize: 8),
                               ),
                             ),
                           ],
@@ -184,15 +202,20 @@ class HomePage extends StatelessWidget {
                         child: Column(
                           children: [
                             IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ComplaintBox()));
+                              },
                               icon: Image.asset('images/complaint.png'),
                               iconSize: 40.0,
                             ),
                             const Padding(
                               padding: EdgeInsets.only(bottom: 4.0),
                               child: Text(
-                                'Smart-Bin Locator',
-                                style: TextStyle(fontSize: 12),
+                                'Complaints and Reports',
+                                style: TextStyle(fontSize: 8),
                               ),
                             ),
                           ],
@@ -218,11 +241,15 @@ class HomePage extends StatelessWidget {
                       ),
                       const Padding(
                         padding: EdgeInsets.symmetric(
-                            vertical: 15.0, horizontal: 30.0),
+                            vertical: 15.0, horizontal: 7.0),
                         child: Text(
                           'Now you can Buy,Sell and Rent \nused products from your Locality',
                           textAlign: TextAlign.center,
                           softWrap: true,
+                          style: TextStyle(
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
                         ),
                       ),
                       IconButton(
